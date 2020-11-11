@@ -1,12 +1,12 @@
 package com.example.lbg.service;
 
-import com.example.lbg.repository.PlantRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import com.example.lbg.entity.User;
 
-@Service
-@RequiredArgsConstructor
-public class PlantService {
+import java.util.Set;
 
-    private final PlantRepository repository;
+public interface PlantService {
+    User findByName(String name);
+    User findById(Long id);
+    User save(User user);
+    Set<User> findall();
 }
